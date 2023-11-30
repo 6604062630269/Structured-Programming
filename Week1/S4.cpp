@@ -3,7 +3,6 @@
 
 int main(void) {
 	int x1, x2;
-	printf("x1\nx2\n");
 	scanf("%d\n%d", &x1, &x2);
 	if (x1 > x2) {
 		printf("x1 > x2\n");
