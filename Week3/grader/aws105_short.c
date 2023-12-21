@@ -43,7 +43,7 @@ int main(void) {
     }
     num -= temp * step;
     step /= 10;
-    if (num)
+    if (step)
       printf(" ");
   }
 }
