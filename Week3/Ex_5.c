@@ -14,4 +14,5 @@ int main(void) {
     } else if (month <= 11) {
         printf("Autumn\n");
     }
+    return 0;
 }

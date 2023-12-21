@@ -7,9 +7,10 @@ int main(void) {
         printf("Congratulations! You ");
         printf("See you next semeter\n");
     } else if (score >= 15) {
-        prinf("You can test again!\n")
+        printf("You can test again!\n");
     } else {
         printf("You are false \n");
         printf("See you again\n");
     }
+    return 0;
 }
