@@ -7,6 +7,6 @@ int main (void){
 	scanf("%c %d", &x, &i);
 	
 	for (int j = 1; j <= i; j++)
-        printf ("%c", x);
+        printf("%c", x);
    	return 0;
 }
