@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main (void){
-	int i, ii;
+	int i;
 	char x;
 	
-	scanf("%c %d %d", &x, &i, &ii);
+	scanf("%c %d", &x, &i);
 	
-	for (int j = 1; j <= ii; j++) {
+	for (int j = 1; j <= i; j++) {
 		for (int k = 1; k <= i; k++) {
         	printf("%c", x);
 		}
