@@ -24,19 +24,27 @@ int pow_(int x, int n) {
 }
 
 
-int main(void) {;
+int main(void) {
     int n, temp, count, clone, sum;
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &temp);
-        sum = 0;
-        count = sizeof(temp);          // เลขสำหรับยกกำลัง
+
+        count = 0;           // เลขสำหรับยกกำลัง
         clone = temp;
         while (clone) {     // Loop until clone = 0
+            clone /= 10;    // 1634 --> 163;   163 --> 16;   16 --> 1;   1 --> 0;
+            count++;
+        }
+
+        clone = temp;
+        sum = 0;
+        while (clone) {
             sum += pow_(clone%10, count);
             clone /= 10;    // 1634 --> 163;   163 --> 16;   16 --> 1;   1 --> 0;
         }
+
         if (temp == sum) {
             printf("YES\n");
         } else {
