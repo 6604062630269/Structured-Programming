@@ -1,14 +1,15 @@
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 
 int main()
 {
     int n;
-    scanf("%d",&n);
+    scanf("%d\n", &n);
 
     for (int i=0; i<n; i++) {
-        char fulltext[14];
-        scanf("%s", fulltext);
+        char fulltext[15];
+        gets(fulltext);
 
         if (fulltext[0] > 57) {     // Not Digital ( Ascii )
             int count = 0;
