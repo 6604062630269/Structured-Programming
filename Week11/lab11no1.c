@@ -3,14 +3,14 @@
 #include <ctype.h>
 
 typedef struct {
-	char loginname[64];
-	char password[64];
+  char loginname[64];
+  char password[64];
 } account;
 
 typedef struct {
-	char stdID[16];
-	char nameSurname[25];
-	account stdACC;
+  char stdID[17];
+  char nameSurname[25];
+  account stdACC;
 } hoststd;
 
 
@@ -24,13 +24,13 @@ int checkLogin(hoststd cs[5], char *login, char *password) {
 }
 
 int main() {
-    char login[5], password[5];
+    char login[6], password[6];
     printf("Enter login : ");
     gets(login);
     printf("Enter password : ");
     gets(password);
 
-    hostdtd cs[5] = {
+    hoststd cs[5] = {
         {"66-040626-2686-9","MR.A","user1", "pass1"},
         {"66-040626-3686-9","MR.B","user2", "pass2"},
         {"66-040626-4686-9","MR.C","user3", "pass3"},
@@ -38,10 +38,11 @@ int main() {
         {"66-040626-6686-9","MR.E","user5", "pass5"},
     };
 
-    int index = checkLogin(hoststd cs[5], login, password);
+    int index = checkLogin(cs, login, password);
     if (index != -1) {
         printf("Welcome\n");
-        printf("%s", cs[index].stdID);
+        printf("ID : %s\n", cs[index].stdID);
+        printf("User : %s\n", cs[index].nameSurname);
     } else {
         printf("Incorrect login or password\n");
     }
