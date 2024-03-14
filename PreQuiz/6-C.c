@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 typedef struct {
   char name[16];
@@ -17,22 +16,19 @@ int index_;
 
 int main() {
   Student directory[50];
-  
+
   int n;
   scanf("%d\n", &n);
 
   for (index_=0; index_<n; index_++) {
-    char text[37];
-    gets(text);
-    char *name = strtok(text, " ");
-    char *surname = strtok(NULL, " ");
-    strcpy(directory[index_].name, name);
-    strcpy(directory[index_].surname, surname);
+    char name[16], surname[20];
+    scanf("%s", directory[index_].name);
+    scanf("%s", directory[index_].surname);
 
     for (int i=0; i<=3; i++) {
-      scanf("%d", directory[index_].score[i])
+      scanf("%d", &directory[index_].score[i]);
     }
-    scanf("%d\n", directory[index_].score[4])
+    scanf("%d\n", &directory[index_].score[4]);
   }
 
   readStudentData(directory);
