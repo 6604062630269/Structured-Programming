@@ -52,6 +52,8 @@ void readStudentData(Student *list_data) {
         Stu_Max = ii;
       }
     }
-    printScore2(list_data[Stu_Max], temp);
+    if (max != -1) {
+      printScore2(list_data[Stu_Max], temp);
+    }
   }
 }
