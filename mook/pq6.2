@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+
+typedef struct {
+    char name[16];
+    char surname[20];
+    char score[5];
+    float stotal;
+} Student;
+Student list[50],sc[5];
+
+int main(void){
+    int n;
+    scanf("%d",&n);
+    int i,j;
+    for(i = 0;i < n;i++){
+        scanf("%s %s",list[i].name,list[i].surname);
+        for(j = 0;j < 5;j++){
+            scanf("%d",&sc[i].score[j]);
+        }
+    }
+    for(i = 0;i < n;i++){
+        printf("%s ",list[i].name);
+        printf("%d ",sc[i].score[1]);
+        printf("\n");
+    }
+}
