@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<string.h>
+
+typedef struct {
+    char name[64];
+    char phoneNumber[32];
+} phoneBook;
+phoneBook directory[50];
+
+//void addRecord(char *someone, char *pnumber,int n);
+//char *searchPhone(char *name);
+
+int main(void){
+    int n;
+    scanf("%d",&n);
+    char name[20][20];
+    char tel[20][20];
+    int i,j;
+    int count[20];
+    for(i = 0;i < n;i++){
+        scanf("%s %s",directory[i].name,directory[i].phoneNumber);
+    }
+//    for(i = 0;i < n;i++){
+//        printf("%s\n",directory[i].name);
+//    }
+    int r;
+    scanf("%d",&r);
+    for(i = 0;i < r;i++){
+        scanf("%s",name[i]);
+    }
+//    for(i = 0;i < r;i++){
+//        printf("%s\n",name[i]);
+//    }
+    for(i = 0;i < r;i++){
+        count[i] = 0;
+        for(j = 0;j < n;j++){
+            if(!strcmp(name[i],directory[j].name)){
+                count[i] += 1;
+                printf("%s\n",directory[j].phoneNumber);
+            }
+        }
+        if(count[i] == 0){
+            printf("N/A\n");
+        }
+    }
+
+}
